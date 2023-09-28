@@ -1,0 +1,77 @@
+[tool.ruff]
+target-version = "py39"  # should match Python version in Docker image
+extend-exclude = ["drone_common", "scripts/ps.py", "scripts/gdal2tiles_parallel.py", "dd_ml", "ddml", "cloud_ml", "pyelsed", "OpenSfM"]  # ignore all submodules
+line-length = 120
+select = [   # Full list of rules: https://beta.ruff.rs/docs/rules/
+    "F",     # pyflakes (default)
+    "E",     # pycodestyle errors (default)
+    "W",     # pycodestyle warnings
+    "I",     # import sorting via isort
+    "UP",    # upgrade old syntax to this Python version via pyupgrade
+    "ASYNC", # avoid blocking calls in async methods via flake8-async
+    "B",     # a bunch of subtle bugs and issues via flake8-bugbear
+    "A",     # name collisions with Python built-ins via flake8-builtins
+    "C4",    # better list/set/dict comprehensions via flake8-comprehensions
+    "T10",   # disallow breakpoints via flake8-debugger
+    "ICN",   # always import numpy as np via flake8-import-conventions
+    "G",     # better logging format via flake8-logging-format
+    "T20",   # disallow print() via flake8-print
+    "RSE",   # better raise statements via flake8-raise
+    "RUF100",# disallow ineffective noqa directives
+    "PIE",   # miscellaneous lints via flake8-pie
+    "SIM",   # simplifications via flake8-simplify
+    # rules to consider for the future
+    # "PTH",   # encourage use of pathlib via flake8-use-pathlib
+]
+ignore = [
+    "E501",  # line lengths are handled by Black, not Ruff
+    "A003",  # it's OK for class names to collide with built-in names
+    "UP031", # we'd rather have f-strings than .format()
+    "B904",  # don't worry about exception chaining
+    "G004",  # it's OK to use f-strings in logging
+]
+
+[tool.ruff.flake8-comprehensions]
+allow-dict-calls-with-keyword-arguments = true
+
+[tool.ruff.isort]
+force-single-line = true  # one import per line, like reorder-python-imports
+order-by-type = false  # don't group imports by type, only alphabetically
+known-first-party = ['./*.py', 'drone_common', 'test', 'dd_ml', 'ddml', 'cloud_ml', 'pyelsed', 'OpenSfM']
+
+[tool.ruff.flake8-unused-arguments]
+ignore-variadic-names = true
+
+
+[tool.black]
+target-version = ['py39']  # should match Python version in Docker image
+line-length = 120
+safe = true  # perform AST check to verify code is functionally unchanged
+skip-string-normalization = true  # don't change single quotes to double
+skip-magic-trailing-comma = true  # nice to have, see docs for more info
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the project root
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | drone_common
+    | dd_ml
+    | ddml
+    | cloud_ml
+    | pyelsed
+    | OpenSfM
+  )/
+  | .*/snap_.*.py
+  | scripts/gdal2tiles_parallel.py
+  | scripts/ps.py
+)
+'''
