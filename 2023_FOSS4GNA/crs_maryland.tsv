@@ -1,0 +1,10 @@
+code	crs_name	operation_name	method_name	Latitude of false origin	Longitude of false origin	Latitude of 1st standard parallel	Latitude of 2nd standard parallel	Easting at false origin	Northing at false origin
+EPSG:2248	NAD83 / Maryland (ftUS)	SPCS83 Maryland zone (US Survey feet)	Lambert Conic Conformal (2SP)	37.666666666666664	-77.0	39.45	38.3	1312333.333	0.0
+EPSG:26785	NAD27 / Maryland	Maryland CS27	Lambert Conic Conformal (2SP)	37.833333333333336	-77.0	38.3	39.45	800000.0	0.0
+EPSG:26985	NAD83 / Maryland	SPCS83 Maryland zone (meters)	Lambert Conic Conformal (2SP)	37.666666666666664	-77.0	39.45	38.3	400000.0	0.0
+EPSG:2804	NAD83(HARN) / Maryland	SPCS83 Maryland zone (meters)	Lambert Conic Conformal (2SP)	37.666666666666664	-77.0	39.45	38.3	400000.0	0.0
+EPSG:2893	NAD83(HARN) / Maryland (ftUS)	SPCS83 Maryland zone (US Survey feet)	Lambert Conic Conformal (2SP)	37.666666666666664	-77.0	39.45	38.3	1312333.333	0.0
+EPSG:3559	NAD83(NSRS2007) / Maryland	SPCS83 Maryland zone (meters)	Lambert Conic Conformal (2SP)	37.666666666666664	-77.0	39.45	38.3	400000.0	0.0
+EPSG:3582	NAD83(NSRS2007) / Maryland (ftUS)	SPCS83 Maryland zone (US Survey feet)	Lambert Conic Conformal (2SP)	37.666666666666664	-77.0	39.45	38.3	1312333.333	0.0
+EPSG:6487	NAD83(2011) / Maryland	SPCS83 Maryland zone (meters)	Lambert Conic Conformal (2SP)	37.666666666666664	-77.0	39.45	38.3	400000.0	0.0
+EPSG:6488	NAD83(2011) / Maryland (ftUS)	SPCS83 Maryland zone (US Survey feet)	Lambert Conic Conformal (2SP)	37.666666666666664	-77.0	39.45	38.3	1312333.333	0.0
