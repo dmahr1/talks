@@ -1,0 +1,94 @@
+% Geotransform of georeferenced image
+\begin{bmatrix}
+4.0 & 0.0 & 432750.0 \\
+0.0 & -4.0 & 179936.0 \\
+\end{bmatrix}
+\times
+\begin{bmatrix}
+c \\
+r \\
+1 \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+x \\
+y \\
+\end{bmatrix}
+
+% Geotransform of image warped from meters to survey feet
+\begin{bmatrix}
+13.12\overline{3} & 0.0 & 1419780.624\overline{6} \\
+0.0 & -13.12\overline{3} & 590340.02\overline{6} \\
+\end{bmatrix}
+
+% Geotransform of image warped from state plane meters to Web Mercator
+\begin{bmatrix}
+5.1716 & 0.0 & -8529345.538 \\
+0.0 & -5.1716 & 4762866.556 \\
+\end{bmatrix}
+
+% Geotransform of naive geotransform editing
+\begin{bmatrix}
+5.1680 & 0.0 & -8529342.644 \\
+0.0 & -5.1680 & 4762866.676 \\
+\end{bmatrix}
+
+% Derivation of single point
+\begin{bmatrix}
+a & b & c \\
+d & e & f \\
+\end{bmatrix}
+\times
+\begin{bmatrix}
+c_i \\
+r_i \\
+1 \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+x_i \\
+y_i \\
+\end{bmatrix}
+
+% Big derivation of the linear least squares
+\begin{bmatrix}
+c_1 & r_1 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & c_1 & r_1 & 1 \\
+c_2 & r_2 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & c_2 & r_2 & 1 \\
+& \vdots & & & \vdots & \\
+c_n & r_n & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & c_n & r_n & 1 \\
+\end{bmatrix}
+\times
+\begin{bmatrix}
+a \\
+b \\
+c \\
+d \\
+e \\
+f \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+x_1 \\
+y_2 \\
+x_2 \\
+y_2 \\
+\vdots \\
+x_n \\
+y_n \\
+\end{bmatrix}
+
+% Geotransform of best fit solution from pixel coordinates to Web Mercator
+\begin{bmatrix}
+5.1610 & -0.0216 & -8529342.634 \\
+-0.0216 & -5.1818 & 4762866.676 \\
+\end{bmatrix}
+
+% Geotransform of best fit solution from pixel coordinates to Web Mercator
+\begin{bmatrix}
+5.1610 & 0.0 & -8529343.974 \\
+0.0 & -5.181 & 4762865.331 \\
+\end{bmatrix}
+
