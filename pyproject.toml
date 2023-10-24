@@ -1,6 +1,6 @@
 [tool.ruff]
 target-version = "py39"  # should match Python version in Docker image
-extend-exclude = ["drone_common", "scripts/ps.py", "scripts/gdal2tiles_parallel.py", "dd_ml", "ddml", "cloud_ml", "pyelsed", "OpenSfM"]  # ignore all submodules
+extend-exclude = []
 line-length = 120
 select = [   # Full list of rules: https://beta.ruff.rs/docs/rules/
     "F",     # pyflakes (default)
@@ -20,8 +20,6 @@ select = [   # Full list of rules: https://beta.ruff.rs/docs/rules/
     "RUF100",# disallow ineffective noqa directives
     "PIE",   # miscellaneous lints via flake8-pie
     "SIM",   # simplifications via flake8-simplify
-    # rules to consider for the future
-    # "PTH",   # encourage use of pathlib via flake8-use-pathlib
 ]
 ignore = [
     "E501",  # line lengths are handled by Black, not Ruff
@@ -37,7 +35,7 @@ allow-dict-calls-with-keyword-arguments = true
 [tool.ruff.isort]
 force-single-line = true  # one import per line, like reorder-python-imports
 order-by-type = false  # don't group imports by type, only alphabetically
-known-first-party = ['./*.py', 'drone_common', 'test', 'dd_ml', 'ddml', 'cloud_ml', 'pyelsed', 'OpenSfM']
+known-first-party = ['./*.py']
 
 [tool.ruff.flake8-unused-arguments]
 ignore-variadic-names = true
@@ -63,15 +61,6 @@ exclude = '''
     | buck-out
     | build
     | dist
-    | drone_common
-    | dd_ml
-    | ddml
-    | cloud_ml
-    | pyelsed
-    | OpenSfM
   )/
-  | .*/snap_.*.py
-  | scripts/gdal2tiles_parallel.py
-  | scripts/ps.py
 )
 '''
